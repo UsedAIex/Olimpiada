@@ -1,8 +1,8 @@
 from helping_func import *
 
 
-def task1():
-    file = opening_file("space.txt")
+def task1(name_file: str):
+    file = opening_file(name_file)
     new_data = []
     for row in file:
         name_ship, num_ship = row[0], row[1]
