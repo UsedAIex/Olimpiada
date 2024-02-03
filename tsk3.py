@@ -1,7 +1,19 @@
 from helping_func import *
 
 
-def tsk_3(name_file: str):
+def task_3(name_file: str) -> None:
+    """
+    Ищет корабля корабль, который хочет пользователь
+    Если нашелся такой корабль то выводит строку формата:
+
+        Корабль {ShipName} был отправлен с планеты: {planet} и его направление движения было: {direction},
+
+    где ShipName - название корабля, planet - навание родной планеты, direction - направление движения
+
+
+    :param name_file: Название файла
+    :return: Ничего
+    """
     file = opening_file(name_file)
     n_ship = input()
     while n_ship != "stop":

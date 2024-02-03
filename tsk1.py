@@ -1,7 +1,19 @@
 from helping_func import *
 
 
-def task1(name_file: str):
+def task_1(name_file: str) -> None:
+    """
+    Функция переписывает нулевые координаты последнего места связи.
+    Она ничего не возврацает, только выводит на экран строку вида
+
+        {name_ship}-{num_ship} - {x_coord} {y_coord},
+
+    где name_ship - Код корабля,num_ship - номер корабля, x_coord, y_coord - координаты последнего места связи
+
+    :param name_file: Название файла
+    :return: Ничего
+    """
+
     file = opening_file(name_file)
     new_data = [file[0]]
     file = file[1:]

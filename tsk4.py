@@ -1,7 +1,13 @@
 from helping_func import *
 
 
-def tsk_4(name_file: str):
+def task_4(name_file: str):
+    """
+    Генерирует пароли
+
+    :param name_file: Название файла
+    :return: Ничего
+    """
     file = opening_file(name_file)
     st_row = file[0][:-1]
     st_row += "*password"
@@ -18,5 +24,3 @@ def tsk_4(name_file: str):
 
         result.append(f"{name_ship}-{num_ship}*{home_planet}*{x_coord} {y_coord}*{x_direction} {y_direction}*{password}")
     writing_file("space_uniq_password.csv", result)
-
-tsk_4("space.txt")
