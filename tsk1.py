@@ -3,7 +3,8 @@ from helping_func import *
 
 def task1(name_file: str):
     file = opening_file(name_file)
-    new_data = []
+    new_data = [file[0]]
+    file = file[1:]
     for row in file:
         name_ship, num_ship = row[0], row[1]
         home_planet = row[2]

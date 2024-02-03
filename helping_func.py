@@ -1,7 +1,8 @@
 def opening_file(name: str):
     file = open(name, encoding="UTF-8")
-    file.readline()
+    st_row = file.readline()
     result = []
+    result.append(st_row)
     for row in file.readlines():
         if row[-1] == "\n":
             row = row[:-1]
@@ -17,6 +18,9 @@ def opening_file(name: str):
 
 def writing_file(name: str, data: list):
     file_w = open(name, "w", encoding="UTF-8")
+    file_w.write(data[0])
+    file_w.write("\n")
+    data = data[1:]
     for row in data:
         file_w.write(row)
         file_w.write("\n")
